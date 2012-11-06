@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'makecal'
+
+class UI < Thor
+  include Thor::Actions
+
+  desc "makecal", "Generates postscript calendar to your desktop"
+  def makecal
+    puts run "pcal -B -b all -d Helvetica/8 -t Helvetica/16 -S #{Time.now.month} #{Time.now.year} > ~/Desktop/#{Time.now.month}-#{Time.now.year}"
+  end
+end
+
+UI.start
