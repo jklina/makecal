@@ -4,6 +4,7 @@ require 'makecal'
 
 class UI < Thor
   include Thor::Actions
+  default_action :makecal
 
   desc "makecal", "Generates postscript calendar to your desktop"
   def makecal
