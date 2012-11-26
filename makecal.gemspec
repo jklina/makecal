@@ -9,10 +9,13 @@ Gem::Specification.new do |gem|
   gem.homepage      = ""
 
   # Requirements
-  gem.requirements << "pcal"
+  gem.requirements << 'pcal'
 
   # Dependencies
-  gem.add_dependency "thor"
+  gem.add_dependency 'thor'
+
+  # Development Dependencies
+  gem.add_development_dependency 'rspec'
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

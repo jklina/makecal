@@ -7,8 +7,11 @@ class UI < Thor
   default_task :makecal
 
   desc "makecal", "Generates postscript calendar to your desktop"
+  method_option :month, aliases: "-m", desc: "Specify a particular month (1-12)", default: Time.now.month
+  method_option :year, aliases: "-y", desc: "Specify a particular year (YYYY)", default: Time.now.year
+
   def makecal
-    run "pcal -B -b all -d Helvetica/8 -t Helvetica/16 -S #{Time.now.month} #{Time.now.year} > ~/Desktop/#{Time.now.month}-#{Time.now.year}"
+    run "pcal -B -b all -d Helvetica/8 -t Helvetica/16 -S #{options[:month]} #{options[:year]} > ~/Desktop/#{options[:month]}-#{options[:year]}"
   end
 end
 

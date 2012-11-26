@@ -1,6 +1,6 @@
 # Makecal
 
-TODO: Write a gem description
+This is just a simple wrapper for the pCal command line tool. This app uses sensible defaults for creating postscript calendars to print and sending the files to the desktop.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+type `makecal` in the terminal and a postscript calendar of the current month will be placed on your desktop.
 
 ## Contributing
 
